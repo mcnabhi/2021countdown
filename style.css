@@ -1,0 +1,330 @@
+body{
+    text-align: center; 
+    font-family: sans-serif; 
+    font-weight: 100; 
+    background-color: #ff6d6e;
+    margin: 0;
+    font-family: Activa;
+} 
+
+#triangle-down {
+    width: 0;
+    height: 0;
+    border-left: 11.7rem solid transparent;
+    border-right: 11.7rem solid transparent;
+    border-top: 13rem solid #003333;
+    z-index: -7;
+}
+
+#triangle-up {
+    width: 0;
+    height: 0;
+    border-left: 11.7rem solid transparent;
+    border-right: 11.7rem solid transparent;
+    border-bottom: 13rem solid #003333;
+    position: fixed;
+    bottom: 0;
+    z-index: -7;
+}
+
+h1{ 
+
+  color: #396; 
+
+  font-weight: 100; 
+
+  font-size: 40px; 
+
+  margin: 40px 0px 20px; 
+} 
+
+ #clockdiv{ 
+
+    font-family: sans-serif; 
+    color: #fff; 
+    display: inline-block; 
+    font-weight: 100; 
+    text-align: center;
+    font-size: 1.8rem; 
+} 
+
+#clockdiv div > span{ 
+    padding: 10px;
+    border-radius: 3px; 
+    font-family: Activa;
+    display: inline-block; 
+} 
+.smalltext{ 
+    position: absolute;
+    margin-top: -45px;
+    margin-left: 150px;
+    padding-top: 5px; 
+    font-size: 25px; 
+    font-family: Activa;
+    color: #003333;
+}
+
+.smalltext2{ 
+    position: absolute;
+    margin-top: 5px;
+    margin-left: 160px;
+    padding-top: 5px; 
+    font-size: 20px; 
+    font-family: Activa;
+    color: #003333;
+} 
+
+.smalltext3{ 
+    position: absolute;
+    margin-top: 5px;
+    margin-left: 240px;
+    padding-top: 5px; 
+    font-size: 20px; 
+    font-family: Activa;
+    color: #003333;
+} 
+
+.smalltext4{ 
+    position: absolute;
+    margin-top:78px;
+    margin-left: 190px;
+    padding-top: 5px; 
+    font-size: 20px; 
+    font-family: Activa;
+    color: #003333;
+} 
+
+
+
+.container {
+    background-color: #ff6d6e;
+    border-radius: 50%;
+    height: 23rem;
+    width: 90%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    margin-top: -35px;
+    margin-left: 10px;
+    border: 10px solid  #003333;
+}
+
+
+
+.days {
+    font-size: 7rem;
+    margin-left: 90px;
+    text-align: center;
+    margin-top: -100px;
+   
+}
+
+.hours {
+    position: absolute;
+    margin-top: -30px;
+    margin-left: -30px;
+    font-size: 3rem;
+}
+
+.minutes {
+    position: absolute;
+    margin-top: -30px;
+    margin-left: 50px;
+    font-size: 3rem;
+}
+
+.seconds {
+    position: absolute;
+    margin-left: 20px;
+    margin-top: 60px;
+}
+
+
+button {
+    width: 200px;
+    padding: 5px;
+    margin-top: 130px;
+    border-radius: 10px;
+    background-color: #ff6d6e;
+    border: none;
+    font-size: 20px;
+    color: #003333;
+    font-family: Activa;
+}
+
+button :hover {
+    width: 200px;
+    padding: 5px;
+    margin-top: 130px;
+    border-radius: 10px;
+    background-color: #003333;
+    border: none;
+    font-size: 20px;
+    color: #ff6d6e;
+    font-family: Activa;
+}
+
+.buttons::after,
+.buttons::before{
+  content: '';
+  display: block;
+  position: absolute;
+  width: 20%;
+  height: 20%;
+  border: 2px solid;
+  transition: all 0.6s ease;
+  border-radius: 2px;
+  position: fixed;
+}
+.buttons::after{
+  bottom: 0;
+  right: 0;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-bottom-color: var(--primary);
+  border-right-color: var(--primary);
+}
+.buttons::before{
+  top: 0;
+  left: 0;
+  border-bottom-color: transparent;
+  border-right-color: transparent;
+  border-top-color: var(--primary);
+  border-left-color: var(--primary);
+}
+.buttons:hover:after,
+.buttons:hover:before{
+  border-bottom-color: var(--primary);
+  border-right-color: var(--primary);
+  border-top-color: var(--primary);
+  border-left-color: var(--primary);
+  width: 100%;
+  height: 100%;
+}
+
+span {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.hide-mobile {
+    display: none;
+}
+
+.resume {
+    position: absolute;
+    margin-left: 4em;
+    margin-top: -11.7em;
+    text-align: right;
+    padding: 0 1.4em;
+    list-style-type: none;
+}
+
+.line {
+    color: #ff6d6e;
+    position: absolute;
+    margin-top: -190px;
+    margin-left: 40px;
+    font-family: Activa;
+    font-size: 1.3rem;
+    animation: move 2s infinite alternate;
+}
+
+@keyframes move {
+    0% {
+        transform: translateX(0px);
+    }
+    100% {
+        transform: translateX(60px);
+    }
+}
+
+
+@media only screen and (max-width: 355px) {
+    button {
+        width: 200px;
+        padding: 5px;
+        margin-top: 170px;
+        border-radius: 10px;
+        background-color: #ff6d6e;
+        border: none;
+        font-size: 20px;
+        color: #003333;
+        font-family: Activa;
+    }
+
+    .resume {
+        position: absolute;
+        margin-left: 4em;
+        margin-top: -14.3em;
+        text-align: right;
+        padding: 0 1.4em;
+        list-style-type: none;
+    }
+
+    #triangle-down {
+        width: 0;
+        height: 0;
+        border-left: 11.7rem solid transparent;
+        border-right: 11.7rem solid transparent;
+        border-top: 13rem solid #003333;
+        z-index: -7;
+    }
+    
+    #triangle-up {
+        width: 0;
+        height: 0;
+        border-left: 11.7rem solid transparent;
+        border-right: 11.7rem solid transparent;
+        border-bottom: 13rem solid #003333;
+        position: fixed;
+        bottom: 0;
+        z-index: -7;
+    }
+    
+}
+
+@media only screen and (min-width: 378px) {
+    button {
+        width: 200px;
+        padding: 5px;
+        margin-top: 170px;
+        border-radius: 10px;
+        background-color: #ff6d6e;
+        border: none;
+        font-size: 20px;
+        color: #003333;
+        font-family: Activa;
+    }
+
+    .resume {
+        position: absolute;
+        margin-left: 4em;
+        margin-top: -14.3em;
+        text-align: right;
+        padding: 0 1.4em;
+        list-style-type: none;
+    }
+
+    #triangle-down {
+        width: 0;
+        height: 0;
+        border-left: 12.7rem solid transparent;
+        border-right: 12.7rem solid transparent;
+        border-top: 13rem solid #003333;
+        z-index: -7;
+    }
+    
+    #triangle-up {
+        width: 0;
+        height: 0;
+        border-left: 12.7rem solid transparent;
+        border-right: 12.7rem solid transparent;
+        border-bottom: 13rem solid #003333;
+        position: fixed;
+        bottom: 0;
+        z-index: -7;
+    }
+    
+}
