@@ -249,6 +249,7 @@ span {
 }
 
 .text1 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 15px;
     font-weight: 600;
     letter-spacing: 2px;
@@ -258,6 +259,7 @@ span {
 .text2 {
     font-size: 12px;
     letter-spacing: 2px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 @keyframes text {
