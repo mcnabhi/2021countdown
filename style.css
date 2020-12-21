@@ -1,42 +1,41 @@
 body{
-    text-align: center; 
+    
     font-family: sans-serif; 
     font-weight: 100; 
-    background-color: #ff6d6e;
+    background: radial-gradient(#fff 15%, transparent 15.1%), rgb(240, 58, 58);
+    height: 100%;
+    width: 100%;
+    background-position: 0 0, 25px 25px;
+    background-size: 50px 50px;
     margin: 0;
     font-family: Activa;
+  
 } 
 
-#triangle-down {
-    width: 0;
-    height: 0;
-    border-left: 11.7rem solid transparent;
-    border-right: 11.7rem solid transparent;
-    border-top: 13rem solid #003333;
-    z-index: -7;
+
+body i {
+    position: absolute;
+    top: 190px;
+    display: block;
+    background: rgb(245,199,0,0.8);
+    box-shadow: 1px 2px 3px rgb(0,0,0,0.1);
 }
 
-#triangle-up {
-    width: 0;
-    height: 0;
-    border-left: 11.7rem solid transparent;
-    border-right: 11.7rem solid transparent;
-    border-bottom: 13rem solid #003333;
-    position: fixed;
-    bottom: 0;
-    z-index: -7;
+body i:first-child {
+    width: 100%;
+    height: 60px;
+    top: 400px;
+    
 }
 
-h1{ 
-
-  color: #396; 
-
-  font-weight: 100; 
-
-  font-size: 40px; 
-
-  margin: 40px 0px 20px; 
-} 
+.ii {
+    width: 60px;
+    height: 100%;
+    left: 160px;
+    top: 0;
+    z-index: -2;
+    
+}
 
  #clockdiv{ 
 
@@ -94,11 +93,11 @@ h1{
     color: #003333;
 } 
 
-
-
 .container {
-    background-color: #ff6d6e;
+    background-color:rgb(240, 58, 58);
     border-radius: 50%;
+    position: relative;
+    top: 200px;
     height: 23rem;
     width: 90%;
     display: flex;
@@ -106,7 +105,8 @@ h1{
     align-items: center;
     margin-top: -35px;
     margin-left: 10px;
-    border: 10px solid  #003333;
+    border: 10px solid  rgb(245,199,0,0.8);
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
 }
 
 
@@ -141,15 +141,18 @@ h1{
 
 
 button {
+    position: relative;
     width: 200px;
     padding: 5px;
-    margin-top: 130px;
+    margin-top: 250px;
+    margin-left: 80px;
     border-radius: 10px;
-    background-color: #ff6d6e;
+    background-color: rgb(240, 58, 58);
     border: none;
     font-size: 20px;
     color: #003333;
     font-family: Activa;
+    box-shadow: 0 0 5px rgba(0,0,0,0.6);
 }
 
 button :hover {
@@ -160,7 +163,7 @@ button :hover {
     background-color: #003333;
     border: none;
     font-size: 20px;
-    color: #ff6d6e;
+    color: rgb(240, 58, 58);
     font-family: Activa;
 }
 
@@ -214,40 +217,95 @@ span {
 
 .resume {
     position: absolute;
-    margin-left: 4em;
-    margin-top: -11.7em;
+    margin-left: -1.4em;
+    margin-top: -19.1em;
     text-align: right;
     padding: 0 1.4em;
     list-style-type: none;
 }
 
+.cool {
+    position: relative;
+    transform:  translate(-50%,-50%);
+    margin-top: -120px;
+    left: 190px;
+    color: #003333;
+    font-family: Arruba;
+    background-color:rgb(240, 58, 58);
+    border: 3px solid  rgb(245,199,0,0.8);
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    border-radius: 30%;
+    width: 250px;
+    padding: 5px;
+    text-align: center;
+}
+
+#em1 {
+    font-size: 30px;
+}
+
+.cool span {
+    display: block;
+}
+
+.text1 {
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    animation: text 3s 1;
+}
+
+.text2 {
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+@keyframes text {
+    0%{
+        color: rgb(245,199,0,0.8);
+        margin-bottom: -40px;
+    }
+    30%{
+        letter-spacing: 25px;
+        margin-bottom: -20px;
+    }
+    85%{
+        letter-spacing: 8px;
+        margin-bottom: -10px;
+    }
+}
+
 .line {
-    color: #ff6d6e;
+    text-align: center;
+    color:rgb(24, 58, 58);
     position: absolute;
-    margin-top: -190px;
-    margin-left: 40px;
+    top: 0;
     font-family: Activa;
     font-size: 1.3rem;
     animation: move 2s infinite alternate;
+    
+}
+
+em {
+    font-size: 5.5rem;
 }
 
 @keyframes move {
     0% {
-        transform: translateX(0px);
+        transform: translateX(50px);
     }
     100% {
-        transform: translateX(60px);
+        transform: translateX(100px);
     }
 }
 
-
-@media only screen and (max-width: 355px) {
+@media  screen and (max-width: 320px) {
     button {
         width: 200px;
         padding: 5px;
-        margin-top: 170px;
+        margin-top: 270px;
         border-radius: 10px;
-        background-color: #ff6d6e;
+        background-color:rgb(240, 58, 58);
         border: none;
         font-size: 20px;
         color: #003333;
@@ -256,42 +314,156 @@ span {
 
     .resume {
         position: absolute;
-        margin-left: 4em;
-        margin-top: -14.3em;
+        margin-left: 3.6em;
+        margin-top: -18.5em;
         text-align: right;
         padding: 0 1.4em;
         list-style-type: none;
     }
 
-    #triangle-down {
-        width: 0;
-        height: 0;
-        border-left: 11.7rem solid transparent;
-        border-right: 11.7rem solid transparent;
-        border-top: 13rem solid #003333;
-        z-index: -7;
-    }
+    .container {
+    background-color:rgb(240, 58, 58);
+    border-radius: 50%;
+    position: relative;
+    top: 160px;
+    height: 20rem;
+    width: 85%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    margin-top: -35px;
+    margin-left: 10px;
+    border: 10px solid  rgb(245,199,0,0.8);
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+}
+
+.days {
+    font-size: 7rem;
+    margin-left: 60px;
+    text-align: center;
+    margin-top: -100px;
+   
+}
+
+.smalltext{ 
+    position: absolute;
+    margin-top: -45px;
+    margin-left: 120px;
+    padding-top: 5px; 
+    font-size: 25px; 
+    font-family: Activa;
+    color: #003333;
+}
+
+.smalltext2{ 
+    position: absolute;
+    margin-top: 5px;
+    margin-left: 140px;
+    padding-top: 5px; 
+    font-size: 20px; 
+    font-family: Activa;
+    color: #003333;
+} 
+
+.smalltext3{ 
+    position: absolute;
+    margin-top: 5px;
+    margin-left: 220px;
+    padding-top: 5px; 
+    font-size: 20px; 
+    font-family: Activa;
+    color: #003333;
+} 
+
+.smalltext4{ 
+    position: absolute;
+    margin-top:78px;
+    margin-left: 170px;
+    padding-top: 5px; 
+    font-size: 20px; 
+    font-family: Activa;
+    color: #003333;
+} 
+
+body i:first-child {
+    width: 100%;
+    height: 60px;
+    top: 280px;
     
-    #triangle-up {
-        width: 0;
-        height: 0;
-        border-left: 11.7rem solid transparent;
-        border-right: 11.7rem solid transparent;
-        border-bottom: 13rem solid #003333;
-        position: fixed;
-        bottom: 0;
-        z-index: -7;
-    }
+}
+
+.ii {
+    width: 60px;
+    height: 650px;
+    left: 130px;
+    top: 0;
+    z-index: -2;
     
+}
+
+.line {
+    text-align: center;
+    color:rgb(24, 58, 58);
+    position: absolute;
+    top: 0;
+    font-family: Activa;
+    font-size: 1rem;
+    animation: move 2s infinite alternate;
+    
+}
+
+em {
+    font-size: 3.5rem;
+}
+    
+}
+
+@media  screen and (max-width: 355px) {
+    button {
+        width: 200px;
+        padding: 5px;
+        margin-top: 270px;
+        border-radius: 10px;
+        background-color:rgb(240, 58, 58);
+        border: none;
+        font-size: 20px;
+        color: #003333;
+        font-family: Activa;
+    }
+
+    .resume {
+        position: absolute;
+        margin-left: 3.6em;
+        margin-top: -20.5em;
+        text-align: right;
+        padding: 0 1.4em;
+        list-style-type: none;
+    }
+
+    button {
+        position: relative;
+        width: 200px;
+        padding: 5px;
+        margin-top: 300px;
+        border-radius: 10px;
+        background-color: rgb(240, 58, 58);
+        border: none;
+        font-size: 20px;
+        color: #003333;
+        font-family: Activa;
+        box-shadow: 0 0 5px rgba(0,0,0,0.6);
+    }
+  
 }
 
 @media only screen and (min-width: 378px) {
     button {
         width: 200px;
         padding: 5px;
-        margin-top: 170px;
+        margin-top: 250px;
+        margin-left: 90px;
         border-radius: 10px;
-        background-color: #ff6d6e;
+        background-color:rgb(240, 58, 58);
         border: none;
         font-size: 20px;
         color: #003333;
@@ -300,31 +472,194 @@ span {
 
     .resume {
         position: absolute;
-        margin-left: 4em;
-        margin-top: -14.3em;
+        margin-left: -1.4em;
+        margin-top: -19.3em;
         text-align: right;
         padding: 0 1.4em;
         list-style-type: none;
     }
 
-    #triangle-down {
-        width: 0;
-        height: 0;
-        border-left: 12.7rem solid transparent;
-        border-right: 12.7rem solid transparent;
-        border-top: 13rem solid #003333;
-        z-index: -7;
+    .container {
+        background-color:rgb(240, 58, 58);
+        border-radius: 50%;
+        position: relative;
+        top: 200px;
+        height: 20rem;
+        width: 20rem;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        margin-top: -35px;
+        margin-left: 20px;
+        border: 10px solid  rgb(245,199,0,0.8);
+        box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    }
+
+    body i:first-child {
+        width: 100%;
+        height: 60px;
+        top: 350px;
+        
+    }
+
+    #clockdiv div > span{ 
+        padding: 10px;
+        border-radius: 3px; 
+        font-family: Activa;
+        display: inline-block; 
+    } 
+    .smalltext{ 
+        position: absolute;
+        margin-top: -45px;
+        margin-left: 150px;
+        padding-top: 5px; 
+        font-size: 25px; 
+        font-family: Activa;
+        color: #003333;
     }
     
-    #triangle-up {
-        width: 0;
-        height: 0;
-        border-left: 12.7rem solid transparent;
-        border-right: 12.7rem solid transparent;
-        border-bottom: 13rem solid #003333;
-        position: fixed;
-        bottom: 0;
-        z-index: -7;
+    .smalltext2{ 
+        position: absolute;
+        margin-top: 5px;
+        margin-left: 160px;
+        padding-top: 5px; 
+        font-size: 20px; 
+        font-family: Activa;
+        color: #003333;
+    } 
+    
+    .smalltext3{ 
+        position: absolute;
+        margin-top: 5px;
+        margin-left: 240px;
+        padding-top: 5px; 
+        font-size: 20px; 
+        font-family: Activa;
+        color: #003333;
+    } 
+    
+    .smalltext4{ 
+        position: absolute;
+        margin-top:42px;
+        margin-left: 190px;
+        padding-top: 5px; 
+        font-size: 20px; 
+        font-family: Activa;
+        color: #003333;
+    } 
+
+    .days {
+        font-size: 7rem;
+        margin-left: 90px;
+        text-align: center;
+        margin-top: -100px;
+       
     }
     
+    .hours {
+        position: absolute;
+        margin-top: -30px;
+        margin-left: -30px;
+        font-size: 3rem;
+    }
+    
+    .minutes {
+        position: absolute;
+        margin-top: -30px;
+        margin-left: 50px;
+        font-size: 3rem;
+    }
+    
+    .seconds {
+        position: absolute;
+        margin-left: 20px;
+        margin-top: 30px;
+    }
+    
+}
+
+@media only screen and (min-width: 396px) {
+    .container {
+        background-color:rgb(240, 58, 58);
+        border-radius: 50%;
+        position: relative;
+        top: 200px;
+        height: 20rem;
+        width: 20rem;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        margin-top: -35px;
+        margin-left: 30px;
+        border: 10px solid  rgb(245,199,0,0.8);
+        box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    }
+
+    button {
+        width: 200px;
+        padding: 5px;
+        margin-top: 250px;
+        margin-left: 100px;
+        border-radius: 10px;
+        background-color:rgb(240, 58, 58);
+        border: none;
+        font-size: 20px;
+        color: #003333;
+        font-family: Activa;
+    }
+
+    .ii {
+        width: 60px;
+        height: 100%;
+        left: 180px;
+        top: 0;
+        z-index: -2;
+        
+    }
+
+}
+
+@media only screen and (min-width: 510px) {
+    .box {
+        display: flex;
+        justify-content: center;
+    }
+
+    .container {
+        background-color:rgb(240, 58, 58);
+        border-radius: 50%;
+        position: relative;
+        top: 220px;
+        height: 20rem;
+        width: 20rem;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        margin-top: -35px;
+        margin-left: 30px;
+        border: 10px solid  rgb(245,199,0,0.8);
+        box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    }
+
+    button {
+        width: 200px;
+        padding: 5px;
+        margin-top: 250px;
+        margin-left: 100px;
+        border-radius: 10px;
+        background-color:rgb(240, 58, 58);
+        border: none;
+        font-size: 20px;
+        color: #003333;
+        font-family: Activa;
+    }
+
+    .ii {
+        width: 60px;
+        height: 100%;
+        left: 180px;
+        top: 0;
+        z-index: -2;
+        
+    }
 }
