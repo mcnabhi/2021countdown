@@ -12,11 +12,16 @@ resume.addEventListener('click', function(e) {
 });
 
 freeze.addEventListener('click', function(e){
-               
+    onclick = "this.style.visibility='hidden';"
     nav.classList.toggle('hide-mobile');
     e.preventDefault();
-    clearInterval(x) 
+    clearInterval(x)
+    
 });
+
+function myfunction() {
+    document.getElementById("freeze").style.visibility ="hidden";
+}
 
 var x = setInterval(function() { 
 
@@ -46,3 +51,5 @@ if (t < 0) {
 
         document.getElementById("second").innerHTML = '0'; } 
 }, 1000); 
+
+
